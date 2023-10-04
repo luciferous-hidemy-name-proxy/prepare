@@ -1,12 +1,12 @@
 SHELL = /usr/bin/env bash -xeuo pipefail
 
-stack_name:=
+stack_name:=luciferous-hidemy-name-proxy-prepare
 
 deploy:
 	sam deploy \
 		--stack-name $(stack_name) \
 		--template-file template.yml \
-		--parameter-overrides PrefixGitHubRepository=xxxx/* \
+		--parameter-overrides PrefixGitHubRepository=luciferous-hidemy-name-proxy/* \
 		--capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM \
 		--no-fail-on-empty-changeset
 
